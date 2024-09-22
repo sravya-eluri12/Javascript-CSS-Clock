@@ -1,0 +1,74 @@
+
+    html {
+      background: #1b262c ;
+      background-size: cover;
+      font-family: 'Helvetica Neue', sans-serif;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    body {
+      margin: 0;
+      font-size: 2rem;
+      display: flex;
+      flex: 1;
+      min-height: 100vh;
+      align-items: center;
+      color: #b4afaf; /* Text color */
+    }
+
+    .clock {
+      width: 30rem;
+      height: 30rem;
+      border: 15px solid #dfd5d5;
+      border-radius: 50%;
+      margin: 50px auto;
+      position: relative;
+      padding: 2rem;
+      box-shadow:
+        0 0 0 4px rgba(0, 0, 0, 0.2),
+        inset 0 0 0 3px #B0BEC5,
+        inset 0 0 10px black,
+        0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px); /* account for the height of the clock hands */
+    }
+
+    .hand {
+      position: absolute;
+      top: 50%;
+      left: 50%; /* Center the hand horizontally */
+      transform-origin: 0 0; /* The rotation point is now at the left end */
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    }
+
+    .hour-hand {
+      width: 35%;
+      height: 8px;
+      background: #903931; /* Hour hand color */
+      border-radius: 2px;
+      transform: translateX(-50%); /* Center the hand */
+    }
+
+    .min-hand {
+      width: 45%;
+      height: 6px;
+      background: #488484; /* Minute hand color */
+      border-radius: 2px;
+      transform: translateX(-50%); /* Center the hand */
+    }
+
+    .second-hand {
+      width: 50%;
+      height: 4px;
+      background: #b0a63f; /* Second hand color */
+      border-radius: 2px;
+      transform: translateX(-50%); /* Center the hand */
+    }
+ 
